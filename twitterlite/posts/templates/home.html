@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Twitter Lite</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">Twitter Lite </a></h1>
+
+        {% if user.is_authenticated %}
+        <p>
+            Logged in as <a href="{% url 'profile' user.username %}">@{{ user.username }}</a>
+        </p>
+        <p><a href="{% url 'create_post' %}">New Post</a></p>
+        <form method="post" action="{% url 'logout' %}" class="form-inline">
+            {% csrf_token %}
+            <button type="submit" class="button-link">Logout</button>
+        </form>
+        {% else %}
+        <p>
+            <a href="{% url 'login' %}">Login</a> |
+            <a href="{% url 'register' %}">Register</a>
+        </p>
+        {% endif %}
+
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        <hr>
+    </header>
+
+    <main>
+        {% if user.is_authenticated %}
+        {% if posts %}
+        {% for post in posts %}
+        <div class="post">
+            <p>
+                <strong>
+                    <a href="{% url 'profile' post.user.username %}">@{{ post.user.username }}</a>
+                </strong>
+                — {{ post.created_at|date:"SHORT_DATETIME_FORMAT" }}
+            </p>
+            <p>{{ post.content }}</p>
+
+            {% if user == post.user %}
+            <form method="post" action="{% url 'delete_post' post.id %}" class="form-inline">
+                {% csrf_token %}
+                <button type="submit" class="button-link button-delete">Delete</button>
+            </form>
+            {% endif %}
+        </div>
+        <hr>
+        {% endfor %}
+        {% else %}
+        <p>No posts yet. Be the first to post!</p>
+        {% endif %}
+        {% else %}
+        <p>Please <a href="{% url 'login' %}">log in</a> to see posts.</p>
+        {% endif %}
+    </main>
+</body>
+
+</html>

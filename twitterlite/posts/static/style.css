@@ -1,0 +1,253 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6ecf0;
+  color: #14171a;
+}
+
+/* Links */
+a {
+  color: #1da1f2;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  background-color: white;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header h1 {
+  font-size: 20px;
+}
+header h1 a {
+  color: #1da1f2;
+}
+header p {
+  font-size: 14px;
+}
+
+/* Main content */
+main {
+  width: 600px;
+  margin: 20px auto;
+}
+
+/* Flash messages */
+.messages {
+  list-style: none;
+  margin-bottom: 15px;
+  padding-left: 0;
+}
+.messages li {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 8px;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+/* Post styling */
+.post {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.post p {
+  margin-bottom: 10px;
+}
+.post .date {
+  color: #657786;
+  font-size: 13px;
+}
+.post strong a {
+  color: #14171a;
+}
+
+/* Buttons */
+.button-link {
+  background: none;
+  border: none;
+  color: #1da1f2;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+}
+.button-delete {
+  color: #e0245e;
+}
+
+/* Horizontal rule */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+/* Inline form */
+.form-inline {
+  display: inline;
+}
+
+
+/* Login Page Styling */
+.login-container {
+  width: 100%;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-box {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 30px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #14171a;
+  text-align: center;
+}
+
+/* Form fields */
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Submit button */
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #1991da;
+}
+
+
+/* Profile Page */
+.profile-container {
+  width: 600px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.profile-container h2 {
+  margin-bottom: 15px;
+  color: #14171a;
+}
+
+.profile-container a {
+  color: #1da1f2;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.profile-container a:hover {
+  text-decoration: underline;
+}
+
+.post {
+  background-color: #f8f9fa;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #e1e8ed;
+}
+
+.post p {
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #14171a;
+}
+
+.post .date {
+  color: #657786;
+  font-size: 13px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+
+/* Create Post Page */
+.create-post-container {
+  width: 600px;
+  margin: 40px auto;
+  background-color: white;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.create-post-container h2 {
+  margin-bottom: 20px;
+  color: #14171a;
+}
+
+/* Style textarea and input fields if any */
+.create-post-container textarea,
+.create-post-container input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  resize: vertical;
+}
+
+/* Reuse login-button styles for submit */
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #1991da;
+}
+    

@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <main class="create-post-container">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device, initial-scale=1.0"
+    <title> Create Post</title>
+<head>
+
+<body>
+    <h2>Newpost</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="login-button">Post</button>
+    </form>
+    </main>
+</body>
+</html>

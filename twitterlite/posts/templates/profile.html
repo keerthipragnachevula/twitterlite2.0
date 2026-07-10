@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@{{ profile_user.username }}'s</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+   <main class="profile-container">
+    <h2>@{{ <profile_user class.username }}'s Profile</h2>
+    <p><a href="{% url 'home' %}">Back to Home</a></p>
+    <hr>
+    {% for post in posts %}
+      <p>{{ post.content }}</p>
+      <small class="date">
+      </div>
+    <hr>
+    {% empty %}
+    <p>No posts yet.</p>
+    {% endfor %}   
+    </main>
+</body>
+</html>
